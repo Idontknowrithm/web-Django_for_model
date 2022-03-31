@@ -10,7 +10,7 @@ window.onload = function () {
   let msg = document.querySelector('.message');
   let btn1 = document.querySelector('#reload');
   let btn2 = document.querySelector('#withdraw');
-  let board = new Array(Math.pow(row + 1, 2)).fill(-1); // 144개의 배열을 생성해서 -1로 채움
+  let board = new Array(Math.pow(row + 1, 2)).fill(0); // 144개의 배열을 생성해서 -1로 채움
   let history = new Array();
   let checkDirection = [
     [1, -1],
@@ -124,7 +124,7 @@ window.onload = function () {
       let a = indexToXy(i)[0];
       let b = indexToXy(i)[1];
 
-      if (board[xyToIndex(a, b)] == 1) {
+      if (board[xyToIndex(a, b)] == -1) {
         ctx.fillStyle = 'black';
         ctx.beginPath();
         ctx.arc(
@@ -136,7 +136,7 @@ window.onload = function () {
         );
         ctx.fill();
       }
-      if (board[xyToIndex(a, b)] == 2) {
+      if (board[xyToIndex(a, b)] == 1) {
         ctx.fillStyle = 'white';
         ctx.beginPath();
         ctx.arc(
@@ -172,7 +172,7 @@ window.onload = function () {
       let a = indexToXy(i)[0];
       let b = indexToXy(i)[1];
 
-      if (lastBoard[xyToIndex(a, b)] == 1) {
+      if (lastBoard[xyToIndex(a, b)] == -1) {
         ctx.fillStyle = 'black';
         ctx.beginPath();
         ctx.arc(
@@ -184,7 +184,7 @@ window.onload = function () {
         );
         ctx.fill();
       }
-      if (lastBoard[xyToIndex(a, b)] == 2) {
+      if (lastBoard[xyToIndex(a, b)] == 1) {
         ctx.fillStyle = 'white';
         ctx.beginPath();
         ctx.arc(

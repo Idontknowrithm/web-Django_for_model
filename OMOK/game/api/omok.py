@@ -46,7 +46,7 @@ class Omok():
                         if(board[i + k][u] == 1):
                             alpha += 1
                         elif(board[i + k][u] == -1):
-                            player += -1
+                            player += 1
                     if(alpha == 5):
                         return 1
                     elif(player == 5):
@@ -60,7 +60,7 @@ class Omok():
                         if(board[i][u + k] == 1):
                             alpha += 1
                         elif(board[i][u + k] == -1):
-                            player += -1
+                            player += 1
                     if(alpha == 5):
                         return 1
                     elif(player == 5):

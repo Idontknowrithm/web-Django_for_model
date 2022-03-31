@@ -132,14 +132,14 @@ canvas {
 
 @keyframes blink{
     0% {opacity: 0.6; }
-    20% {opacity: 0.8; }
+    20% {opacity: 0.6; }
     40% {opacity: 0.6; }
-    60% {opacity: 0.8; }
+    60% {opacity: 0.6; }
     80% {opacity: 0.6; }
-    100% {opacity: 0.8;  }
+    100% {opacity: 0.6;  }
 }
 @keyframes trophy {
     0% {width: 30px; height: 30px;}
-    80% {width: 300px; height: 300px;}
-    100% {width: 30px; height: 30px;}
+    50% {width: 150px; height: 150px;}
+    100% {width: 300px; height: 300px;}
 }
